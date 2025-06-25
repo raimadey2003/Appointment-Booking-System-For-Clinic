@@ -12,7 +12,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5050/api/auth/admin-login", {
+      const res = await axios.post("https://appointment-booking-system-for-clinic.onrender.com/api/auth/admin-login", {
         email,
         password,
       });
