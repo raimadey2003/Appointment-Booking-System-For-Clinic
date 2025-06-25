@@ -1,0 +1,128 @@
+/* ---- src/pages/Home.css ---- */
+.home {
+  font-family: 'Poppins', sans-serif;
+  color: #0b3c5d;
+}
+
+.top-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e3f2fd;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.clinic-brand {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.my {
+  color: #42a5f5;
+}
+
+.clinic {
+  color: #0b3c5d;
+}
+
+.auth-buttons .btn {
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #42a5f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.auth-buttons .admin-btn {
+  background-color: #0b3c5d;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #0b3c5d;
+  padding: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid #42a5f5;
+}
+
+.find-doctor-btn {
+  background-color: #42a5f5;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.hero-section {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  background-color: #0b3c5d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: #42a5f5;
+}
+
+.hero-btn.outline {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #f0f0f0;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background: rgba(0, 0, 0, 0.25); /* soft overlay background */
+  border-radius: 10px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  animation: fadeInUp 1.2s ease-out;
+}
