@@ -9,7 +9,7 @@ const PatientAppointmentHistory = () => {
   const fetchAppointments = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5050/api/appointments/patient", {
+      const res = await axios.get("https://appointment-booking-system-for-clinic.onrender.com/api/appointments/patient", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -27,7 +27,7 @@ const PatientAppointmentHistory = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5050/api/appointments/${id}`, {
+      await axios.delete(`https://appointment-booking-system-for-clinic.onrender.com/api/appointments/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
