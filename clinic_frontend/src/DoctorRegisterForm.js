@@ -43,14 +43,14 @@ const DoctorRegisterForm = () => {
       imageData.append("image", formData.image);
 
       const imageUploadRes = await axios.post(
-        "http://localhost:5050/api/upload/doctor-image",
+        "https://appointment-booking-system-for-clinic.onrender.com/api/upload/doctor-image",
         imageData
       );
 
       const imageUrl = imageUploadRes.data.imageUrl;
 
       // Register doctor with backend
-      const registerRes = await axios.post("http://localhost:5050/api/auth/register", {
+      const registerRes = await axios.post("https://appointment-booking-system-for-clinic.onrender.com/api/auth/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password,
