@@ -14,7 +14,7 @@ const DoctorList = () => {
 
   const fetchDoctors = async () => {
     try {
-      const res = await axios.get("http://localhost:5050/api/doctors");
+      const res = await axios.get("https://appointment-booking-system-for-clinic.onrender.com/api/doctors");
       setAllDoctors(res.data);
       setDoctors(res.data);
     } catch (error) {
@@ -25,7 +25,7 @@ const DoctorList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this doctor?")) {
       try {
-        await axios.delete(`http://localhost:5050/api/doctors/${id}`);
+        await axios.delete(`https://appointment-booking-system-for-clinic.onrender.com/api/doctors/${id}`);
         fetchDoctors();
       } catch (err) {
         console.error("Failed to delete doctor:", err);
@@ -65,7 +65,7 @@ const DoctorList = () => {
     if (!date || !time) return alert("Please enter both date and time");
 
     try {
-      await axios.put(`http://localhost:5050/api/doctors/${doctorId}/add-slot`, {
+      await axios.put(`https://appointment-booking-system-for-clinic.onrender.com/api/doctors/${doctorId}/add-slot`, {
         date,
         time,
       });
@@ -78,7 +78,7 @@ const DoctorList = () => {
 
   const handleDeleteSlot = async (doctorId, slotIndex) => {
     try {
-      await axios.put(`http://localhost:5050/api/doctors/${doctorId}/delete-slot`, {
+      await axios.put(`https://appointment-booking-system-for-clinic.onrender.com/api/doctors/${doctorId}/delete-slot`, {
         slotIndex,
       });
       fetchDoctors();
@@ -96,7 +96,7 @@ const DoctorList = () => {
   const handleUpdateSlot = async () => {
     const { doctorId, slotIndex, date, time } = editSlot;
     try {
-      await axios.put(`http://localhost:5050/api/doctors/${doctorId}/update-slot`, {
+      await axios.put(`https://appointment-booking-system-for-clinic.onrender.com/api/doctors/${doctorId}/update-slot`, {
         slotIndex,
         date,
         time,
