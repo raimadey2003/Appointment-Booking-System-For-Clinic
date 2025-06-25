@@ -14,7 +14,7 @@ export default function PatientAuth() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = `http://localhost:5050/api/auth/${isLogin ? "patient-login" : "patient-register"}`;
+    const url = `https://appointment-booking-system-for-clinic.onrender.com/api/auth/${isLogin ? "patient-login" : "patient-register"}`;
     
 
     try {
