@@ -10,7 +10,7 @@ const AdminAppointmentHistory = () => {
   const fetchAppointments = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5050/api/appointments/admin/all", {
+      const res = await axios.get("https://appointment-booking-system-for-clinic.onrender.com/api/appointments/admin/all", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAppointments(res.data);
@@ -24,7 +24,7 @@ const AdminAppointmentHistory = () => {
     if (!window.confirm("Are you sure you want to delete this appointment?")) return;
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5050/api/appointments/admin/${id}`, {
+      await axios.delete(`https://appointment-booking-system-for-clinic.onrender.com/api/appointments/admin/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("🗑️ Appointment deleted");
