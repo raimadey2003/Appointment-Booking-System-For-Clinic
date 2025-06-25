@@ -12,7 +12,7 @@ const PatientDoctorList = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const res = await axios.get("http://localhost:5050/api/doctors");
+        const res = await axios.get("https://appointment-booking-system-for-clinic.onrender.com/api/doctors");
         setAllDoctors(res.data);
         setDoctors(res.data);
       } catch (error) {
@@ -55,7 +55,7 @@ const PatientDoctorList = () => {
 
     try {
       await axios.post(
-        "http://localhost:5050/api/appointments",
+        "https://appointment-booking-system-for-clinic.onrender.com/api/appointments",
         {
           doctor: doctorId,
           date,
